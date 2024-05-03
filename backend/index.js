@@ -6,13 +6,19 @@ import itemsRoute from './Routes/displayData.js';
 import ordersRoute from './Routes/createOrder.js'
 import foodItemsRoute from './Routes/createFoodItem.js'
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
 dotenv.config()
 
 const port = process.env.PORT;
 const app = express()
 
-// app.use(cors)
+app.use(cors({
+            origin : [""],
+            methods : ["POST", "GET"],
+            credentials : true
+        })
+)
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
     res.header(
