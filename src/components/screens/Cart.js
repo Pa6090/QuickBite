@@ -1,6 +1,10 @@
 import React from 'react'
 import { useCart, useDispatchCart } from '../ContextReducer.js'
 
+import dotenv from "dotenv";
+
+dotenv.config()
+
 export default function Cart() {
 
     let data = useCart();
@@ -19,7 +23,7 @@ export default function Cart() {
     const onCheckOut = async () => {
         let username = localStorage.getItem("username")
 
-        let resp = await fetch("http://localhost:5000/orders/createOrder", {
+        let resp = await fetch(`${process.env.BACKEND}/orders/createOrder`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

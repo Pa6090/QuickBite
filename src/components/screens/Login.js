@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar.js';
+import dotenv from "dotenv";
+
+dotenv.config()
 
 export default function Login() {
 
@@ -11,7 +14,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     console.log("inside handle submit")
     e.preventDefault();
-    const resp = await fetch("http://localhost:5000/api/loginUser", {
+    const resp = await fetch(`${process.env.BACKEND}/api/loginUser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

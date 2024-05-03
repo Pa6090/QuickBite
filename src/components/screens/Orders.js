@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar.js'
 import Footer from '../Footer.js'
+import dotenv from "dotenv";
 
+dotenv.config()
 
 export default function Orders() {
 
     const [ orderData, setOrderData ] =  useState("")   
     const getOrders = async () => {
 
-        let resp = await fetch("http://localhost:5000/orders/getOrders", {
+        let resp = await fetch(`${process.env.BACKEND}/orders/getOrders`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
