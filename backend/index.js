@@ -14,7 +14,7 @@ const port = process.env.PORT;
 const app = express()
 
 app.use(cors({
-            origin : ["http://localhost:3000", "https://quick-bite-theta.vercel.app/"],
+            origin : ["http://localhost:3000", "https://quick-bite-theta.vercel.app"],
             methods : ["POST", "GET"],
             credentials : true
         })
