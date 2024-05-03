@@ -20,13 +20,13 @@ app.use(cors({
         })
 )
 
-app.use((req,res,next)=>{
-    res.setHeader("Access-Control-Allow-Origin","https://quick-bite-theta.vercel.app/");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-})
+// app.use((req,res,next)=>{
+//     res.setHeader("Access-Control-Allow-Origin","https://quick-bite-theta.vercel.app/");
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// })
 
 app.use(express.json())
 app.use(cookieParser())
