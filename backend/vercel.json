@@ -10,6 +10,7 @@
         "methods" : ["POST", "GET"]
       }
     ],
+    
     "rewrites" : [
       {
         "source" : "/(.*)",
