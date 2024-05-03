@@ -14,7 +14,7 @@ const port = process.env.PORT;
 const app = express()
 
 app.use(cors({
-            origin : ["http://localhost:3000", "https://quick-bite-api.vercel.app/"],
+            origin : ["http://localhost:3000", "https://quick-bite-theta.vercel.app/"],
             methods : ["POST", "GET"],
             credentials : true
         })
@@ -57,5 +57,5 @@ app.use('/foodItems', foodItemsRoute)
 
 app.listen(port, ()=>{
     connect()
-    console.log("Connected to backend")
+    console.log("Connected to backend", port)
 })
