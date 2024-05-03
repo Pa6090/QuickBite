@@ -9,5 +9,11 @@
         "dest" : "/",
         "methods" : ["POST", "GET"]
       }
+    ],
+    "rewrites" : [
+      {
+        "src" : "/(.*)",
+        "dest" : "/"
+      }
     ]
   }

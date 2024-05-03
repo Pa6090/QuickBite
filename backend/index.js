@@ -50,6 +50,7 @@ mongoose.connection.on("connected", ()=>{
     console.log("Connected to MongoDB")
 })
 
+app.get('/', (req, res)=> { res.status(200).json({"message" : "Hey, Please Work"})})
 app.use('/api', userRoute)
 app.use('/items', itemsRoute)
 app.use('/orders', ordersRoute)
