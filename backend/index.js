@@ -14,7 +14,7 @@ const port = process.env.PORT;
 const app = express()
 
 app.use(cors({
-            origin : ["https://quickbite-backend.vercel.app/"],
+            origin : ["https://quickbite-1-8mfa.onrender.com/"],
             methods : ["POST", "GET"],
             credentials : true
         })
